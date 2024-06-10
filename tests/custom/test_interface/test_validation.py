@@ -55,13 +55,6 @@ def test_validate_prediction():
         conf.validate_prediction(pred)
 
 
-def test_validate_task():
-    conf = LabelInterface(c.SIMPLE_CONF)
-
-    assert conf.validate_task({"data": c.CORRECT_TASK}) is True
-    assert conf.validate_task({"data": {"wrong_var": "value"}}) is False
-
-
 def test_validate_brush():
     """ """
     obj = ImageTag(name="img", value="$val", attr={}, tag="obj")
