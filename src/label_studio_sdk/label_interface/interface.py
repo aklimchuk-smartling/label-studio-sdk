@@ -16,7 +16,6 @@ from collections import defaultdict, OrderedDict
 from lxml import etree
 import xmljson
 
-from label_studio_sdk.objects import TaskValue
 from label_studio_sdk._legacy.exceptions import (
     LSConfigParseException,
     LabelStudioXMLSyntaxErrorSentryIgnored,
