@@ -565,24 +565,24 @@ class LabelInterface:
         """ """
         raise NotImplemented()
 
-    def validate_task(self, task: "TaskValue", validate_regions_only=False):
-        """ """
-        # TODO this might not be always true, and we need to use
-        # "strict" param above to be able to configure
-
-        # for every object tag we've got that has value as it's
-        # variable we need to have an associated item in the task data
-        for obj in self.objects:
-            if obj.value_is_variable and task["data"].get(obj.value_name, None) is None:
-                return False
-
-        if "annotations" in task and not self.validate_annotation():
-            return False
-
-        if "predictions" in task and not self.validate_prediction():
-            return False
-
-        return True
+    # def validate_task(self, task: "TaskValue", validate_regions_only=False):
+    #     """ """
+    #     # TODO this might not be always true, and we need to use
+    #     # "strict" param above to be able to configure
+    #
+    #     # for every object tag we've got that has value as it's
+    #     # variable we need to have an associated item in the task data
+    #     for obj in self.objects:
+    #         if obj.value_is_variable and task["data"].get(obj.value_name, None) is None:
+    #             return False
+    #
+    #     if "annotations" in task and not self.validate_annotation():
+    #         return False
+    #
+    #     if "predictions" in task and not self.validate_prediction():
+    #         return False
+    #
+    #     return True
 
     def _validate_object(self, obj):
         """ """
