@@ -16,6 +16,7 @@ from collections import defaultdict, OrderedDict
 from lxml import etree
 import xmljson
 
+from label_studio_sdk.objects import TaskValue
 from label_studio_sdk._legacy.exceptions import (
     LSConfigParseException,
     LabelStudioXMLSyntaxErrorSentryIgnored,
@@ -148,7 +149,6 @@ def display_count(count: int, type: str) -> Optional[str]:
 
 
 class LabelInterface:
-    from label_studio_sdk.objects import TaskValue
     """The LabelInterface class serves as an interface to parse and
     validate labeling configurations, annotations, and predictions
     within the Label Studio ecosystem.
