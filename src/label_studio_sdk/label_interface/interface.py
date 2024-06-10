@@ -148,7 +148,7 @@ def display_count(count: int, type: str) -> Optional[str]:
 
 
 class LabelInterface:
-    from label_studio_sdk._legacy.objects import TaskValue
+    from label_studio_sdk.objects import TaskValue
     """The LabelInterface class serves as an interface to parse and
     validate labeling configurations, annotations, and predictions
     within the Label Studio ecosystem.
